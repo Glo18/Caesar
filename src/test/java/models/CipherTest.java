@@ -9,4 +9,10 @@ public class CipherTest {
         Cipher testCipher = new Cipher("a", 2);
         assertEquals(true, testCipher instanceof Cipher);
     }
+    @Test
+    public void newCipher_readsAString_a() {
+        Cipher testCipher = new Cipher("a", 2);
+        assertEquals("a", testCipher.getStatement());
+    }
+
 }
