@@ -24,4 +24,9 @@ public class CipherTest {
         Cipher testCipher = new Cipher("a", 2);
         assertEquals("b", testCipher.toEncrypt());
     }
+    @Test
+    public void newCipher_substituteLetterByKey_c(){
+        Cipher testCipher = new Cipher("a", 2);
+        assertEquals("c",testCipher.isEncrypted("a", 2));
+    }
 }
