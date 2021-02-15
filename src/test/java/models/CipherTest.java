@@ -19,5 +19,9 @@ public class CipherTest {
         Cipher testCipher = new Cipher("a", 2);
         assertEquals(2, testCipher.getKey());
     }
-
+    @Test
+    public void newCipher_substituteLetter_b() {
+        Cipher testCipher = new Cipher("a", 2);
+        assertEquals("b", testCipher.toEncrypt());
+    }
 }
