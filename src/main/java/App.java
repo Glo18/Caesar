@@ -15,7 +15,7 @@ public class App {
 
             if (userEncrypt.equals("encrypt")) {
                 System.out.println("Enter your statement:");
-                    String statement = myConsole.readLine();
+                String statement = myConsole.readLine();
                 System.out.println("Enter encryption key:");
                 int key = myScanner.nextInt();
 
@@ -23,6 +23,23 @@ public class App {
                 String encryption = userEncryption.isEncrypted(statement, key);
 
                 System.out.println("Your encrypted statement is: \n" + encryption);
+            } else if (userEncrypt.equals("decrypt")) {
+                System.out.println("Enter your statement:");
+                    String statementDecrypt = myConsole.readLine();
+
+                System.out.println("Enter decryption key:");
+                int keyDecrypt = myScanner.nextInt();
+
+                Cipher userDecryption = new Cipher(statementDecrypt, keyDecrypt);
+                String decryption = userDecryption.toDecrypt(statementDecrypt, keyDecrypt);
+                System.out.println("Your decrypted statement is: \n" + decryption);
+
+            } else if (userEncrypt.equals("exit")) {
+                System.out.println("Goodbye!");
+
+                programRunning = false;
+
             }
         }
+    }
 }
