@@ -8,4 +8,10 @@ public class Cipher {
         mStatement = Statement;
         mKey = Key;
     }
+    public String getStatement() {
+        return mStatement;
+    }
+    public int getKey() {
+        return mKey;
+    }
 }
