@@ -29,5 +29,9 @@ public class CipherTest {
         Cipher testCipher = new Cipher("a", 2);
         assertEquals("c",testCipher.isEncrypted("a", 2));
     }
-
+    @Test
+    public void newCipher_substituteMultipleLettersByKeys_cde(){
+        Cipher testCipher = new Cipher("cde", 2);
+        assertEquals("abc",testCipher.toDecrypt("cde",2));
+    }
 }
